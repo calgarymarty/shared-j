@@ -1,8 +1,8 @@
 <templateSet group="caps">
-  <template name="capsenum" value="finishMe(&quot;finishMe&quot;); &#10;&#10;private String cd; &#10;&#10;$type_name$ (String s) &#10;{ &#10;  this.cd = s; &#10;} &#10;&#10;public String toString()&#10;{ &#10;  return stringValue(); &#10;}&#10;&#10;public String stringValue() &#10;{ &#10;  return cd; &#10;} &#10;&#10;public boolean equals(String value) &#10;{ &#10;  return cd.equalsIgnoreCase(value); &#10;} &#10;&#10;public static $type_name$ parse(String e) &#10;{ &#10;  $type_name$[] arr = values();&#10;  for (int i = 0; i &lt; arr.length; i++)&#10;  { &#10;    if( arr[i].equals(e) ) &#10;      return arr[i]; &#10;  } return null; &#10;} " shortcut="TAB" description="Code Template for CAPS enums" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+  <template name="capsenum" value="finishMe(&quot;finishMe&quot;); private String cd; $type_name$ (String s) { this.cd = s; } public String toString() { return stringValue(); } public String stringValue() { return cd; } public boolean equals(String value) { return cd.equalsIgnoreCase(value); } public static $type_name$ parse(String e) { $type_name$[] arr = values(); for (int i = 0; i &lt; arr.length; i++) { if( arr[i].equals(e) ) return arr[i]; } return null; } " description="Code Template for CAPS enums" toReformat="true" toShortenFQNames="true" useStaticImport="true">
     <variable name="type_name" expression="typeOfVariable(VAR)" defaultValue="" alwaysStopAt="false" />
     <context>
-      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_CODE" value="true" />
     </context>
   </template>
 </templateSet>
